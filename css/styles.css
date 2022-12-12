@@ -25,7 +25,7 @@ h4,
 h5,
 h6,
 p {
-  margin-top: 0;
+  margin: 0;
 }
 
 .list {
@@ -51,6 +51,10 @@ address {
 
 .header {
   border-bottom: 1px solid #ececec;
+}
+
+.address-list:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 .header > .container {
@@ -83,8 +87,20 @@ address {
   align-items: center;
 }
 
-.img-contact {
+.contacts-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.container-icon {
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
   margin-bottom: 30px;
+  padding: 25px;
 }
 
 .ul {
@@ -98,6 +114,7 @@ address {
 }
 .section {
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .btn {
@@ -139,6 +156,7 @@ address {
   outline: none;
   border: none;
   cursor: pointer;
+  padding: 6px 22px;
 }
 .button:hover,
 .button:focus {
@@ -274,8 +292,17 @@ address {
 }
 
 .section-title {
-  background: var(--background-footer);
   padding: 200px 0 200px 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Imgшапка.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .section-title .title {
@@ -298,8 +325,8 @@ address {
   display: flex;
 }
 
-.work-list li {
-  margin-right: 30px;
+.work-list {
+  gap: 30px;
 }
 
 .qualities {
@@ -340,7 +367,6 @@ address {
 .section-team {
   background: var(--text-section);
   padding-bottom: 94px;
-  margin-top: 94px;
 }
 
 .ourtaem {
@@ -352,12 +378,50 @@ address {
   background-color: white;
 }
 
+.ourtaem-soc {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 2px 1px rgb(0 0 0 / 20%);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.ourtaem-soc-icon:hover,
+.ourtaem-soc-icon:hover {
+  color: #2196f3;
+  background-color: #ffffff;
+  fill: currentColor;
+}
+
 .container {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.container-soc-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+}
+
+.container-soc-list:hover {
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.container-works {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 
 .ourtaem-title {
@@ -368,7 +432,7 @@ address {
   letter-spacing: 0.03em;
 
   color: var(--text-color);
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .ourtaem h3 {
@@ -381,6 +445,7 @@ address {
 
   color: var(--text-color);
   margin-bottom: 10px;
+  padding-top: 30px;
 }
 .ourtaem p {
   font-weight: 400;
@@ -391,7 +456,7 @@ address {
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
-  padding-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .list-works {
@@ -402,6 +467,53 @@ address {
 
 .item-works {
   width: calc((100% - 60px) / 3);
+}
+
+.client-title {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 50px;
+}
+
+.client-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.client-link-icon {
+  display: flex;
+  align-items: center;
+  fill: #afb1b8;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.client-link-icon:hover,
+.client-link-icon:focus {
+  border: 1px solid var(--text-hover-color);
+  fill: var(--text-hover-color);
+}
+
+.ourtaem-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.ourtaem-soc-link {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  fill: currentColor;
 }
 
 .portfolio {
@@ -416,6 +528,7 @@ address {
   letter-spacing: 0.06em;
 
   color: var(--text-color);
+  margin-bottom: 4px;
 }
 
 .portfolio-description {
@@ -433,6 +546,10 @@ address {
   padding-bottom: 60px;
 }
 
+.footer-container {
+  display: flex;
+}
+
 .address-footer {
   display: flex;
   flex-direction: column;
@@ -440,6 +557,47 @@ address {
   margin-top: 28px;
   font-size: 14px;
   line-height: 1.14;
+}
+
+.address-list {
+  margin-bottom: 9px;
+}
+
+.soc-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-soc {
+  margin-left: 70px;
+}
+
+.footer-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .fon {
