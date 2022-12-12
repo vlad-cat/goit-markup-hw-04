@@ -385,10 +385,18 @@ address {
   border-radius: 0px 0px 4px 4px;
 }
 
+.ourtaem-soc-icon {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  fill: currentColor;
+  color: #afb1b8;
+}
+
 .ourtaem-soc-icon:hover,
-.ourtaem-soc-icon:hover {
-  color: #2196f3;
+.ourtaem-soc-icon:focus {
   background-color: #ffffff;
+  color: #2196f3;
   fill: currentColor;
 }
 
@@ -409,12 +417,6 @@ address {
   height: 44px;
   border-radius: 50%;
   color: #afb1b8;
-}
-
-.container-soc-list:hover {
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  color: #ffffff;
 }
 
 .container-works {
@@ -585,19 +587,9 @@ address {
   gap: 10px;
 }
 
-.soc-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+.footer-soc-icon {
+  fill: currentColor;
+  color: var(--primary-text-color);
 }
 
 .fon {
